@@ -2,7 +2,7 @@
 
 Repository to store my challenges made in the [B.Academy](https://b-academy.brainn.co/) React Bootcamp.
 
-- [ ] [Challenge One]()
+- [ ] [Challenge One](https://github.com/rayanaprata/b-academy-bootcamp-React/tree/main/challengeOne/my-app)
 - [ ] [Challenge Two]()
 - [ ] [Challenge Three]()
 - [ ] [Challenge Four]()
