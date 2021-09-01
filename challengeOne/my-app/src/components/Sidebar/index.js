@@ -1,6 +1,6 @@
 import "./index.css";
 
-export default function Sidebar() {
+export function Sidebar() {
     return <aside>Sidebar</aside>;
 }
   

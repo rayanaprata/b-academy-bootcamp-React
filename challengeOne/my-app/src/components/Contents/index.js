@@ -1,5 +1,5 @@
 import "./index.css";
 
-export default function Contents() {
+export function Contents() {
     return <article>Contents</article>;
 }

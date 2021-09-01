@@ -1,5 +1,5 @@
 import "./index.css";
 
-export default function Menu() {
+export function Menu() {
     return <nav>Menu</nav>;
 }

@@ -1,5 +1,5 @@
 import "./index.css";
 
-export default function Header() {
+export function Header() {
     return <header>Header</header>;
 }
