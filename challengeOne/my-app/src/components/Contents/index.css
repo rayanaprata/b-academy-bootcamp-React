@@ -1,0 +1,6 @@
+article {
+    background-color: rgb(202, 243, 255);
+    display: inline-block;
+    height: 53vh;
+    width: calc(100% - (20vw + 10px));
+}
