@@ -40,7 +40,7 @@ function App() {
       <Header />
       <Menu />
       <Sidebar articles={articles} />
-      <Contents />
+      <Contents articles={articles} />
       <Footer />
     </div>
   );
