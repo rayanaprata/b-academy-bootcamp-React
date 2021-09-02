@@ -1,4 +1,5 @@
 import "./style.css";
+import { useState } from 'react';
 import { Header } from "./components/Header/index";
 import { Menu } from "./components/Menu/index";
 import { Sidebar } from "./components/Sidebar/index";
@@ -32,15 +33,25 @@ const articles = [
       <p>Architecture of React: What should the folder structure look like?</p>
     )
   },
-]
+];
 
 function App() {
+  const [title, setTitle] = useState(articles[0].title);
+  const [content, setContent] = useState(articles[0].content);
+
+  function handleContent(e, id) {
+    e.preventDefault();
+    const newArticle = articles.find((article) => article.id === id);
+    setTitle(newArticle.title);
+    setContent(newArticle.content);
+  }
+
   return (
     <div className="container">
       <Header />
       <Menu />
-      <Sidebar articles={articles} />
-      <Contents articles={articles} />
+      <Sidebar articles={articles} handleContent={handleContent} />
+      <Contents title={title} content={content} />
       <Footer />
     </div>
   );
