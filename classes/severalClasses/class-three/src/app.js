@@ -1,13 +1,13 @@
+const list = [1, 2, 3];
+
 function App() {
   return (
-    <Title>
-      <i>Rayana</i>
-    </Title>
+    <ul>
+      {list.map((item) => (
+        <li key={item}>{item}</li>
+      ))}
+    </ul>
   );
-}
-
-function Title({children}) {
-  return <h1>Hello {children}</h1>;
 }
 
 export default App;
