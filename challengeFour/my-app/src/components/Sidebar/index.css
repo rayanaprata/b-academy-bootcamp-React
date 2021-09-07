@@ -1,0 +1,24 @@
+aside {
+    background-color: rgb(204, 255, 202);
+    display: inline-block;
+    padding: 18% 0;
+    margin:  0 10px 10px 0;
+    height: 55vh;
+    width: 20vw;
+}
+
+.links-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+.link-sidebar {
+    color:rgb(63, 109, 61);
+    text-decoration: none;
+}
+
+.link-sidebar:hover {
+    color:rgb(7, 63, 5);
+}
