@@ -20,7 +20,7 @@ export function Table({cars, handleDelete}) {
           ))
         ) : (
           <tr>
-            <td>Nenhum carro cadastrado.</td>
+            <td colSpan="6">Nenhum carro cadastrado.</td>
           </tr>
         )}
       </tbody>

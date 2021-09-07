@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import {Form} from "./components/form/index";
 import {Table} from "./components/table/index";
 import {get, post, del} from "./http";
+import "./style.css";
 
 const url = "http://localhost:3333/cars";
 
@@ -11,12 +12,7 @@ function App() {
   useEffect(() => {
     async function getCars() {
       const result = await get(url);
-
-      if (result.error) {
-        console.log("Erro ao buscar carros: ", result.message);
-        return;
-      }
-
+      console.log("get", result);
       setCars(result);
     }
 
@@ -36,6 +32,7 @@ function App() {
 
     const newCars = [...cars, car];
     const result = await post(url, car);
+    console.log("post", result);
 
     if (result.error) {
       console.log("Erro ao registrar: ", result.message);
@@ -49,6 +46,7 @@ function App() {
   async function handleDelete(plate) {
     const newCars = cars.filter((car) => plate !== car.plate);
     const result = await del(url, {plate});
+    console.log("delete", url, plate);
 
     if (result.error) {
       console.log("Erro ao deletar: ", result.message);
@@ -59,10 +57,10 @@ function App() {
   }
 
   return (
-    <>
+    <div className="cars">
       <Form handleSubmit={handleSubmit} />
       <Table cars={cars} handleDelete={handleDelete} />
-    </>
+    </div>
   );
 }
 
