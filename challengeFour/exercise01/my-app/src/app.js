@@ -1,4 +1,5 @@
-import "./style.css";
+import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { useState } from 'react';
 import { Header } from "./components/Header/index";
 import { Menu } from "./components/Menu/index";
@@ -12,7 +13,7 @@ const articles = [
     title: 'Clean Architecture on Frontend', // https://dev.to/bespoyasov/clean-architecture-on-frontend-4311
     content: (
       <p>
-        What is clean architecture in general and get familiar with 
+        What is clean architecture in general and get familiar with
         such concepts as domain, use case and application layers.
       </p>
     )
@@ -21,8 +22,8 @@ const articles = [
     id: 2,
     title: 'React Practice Project for Beginner to Advance', // https://dev.to/undefinedhere/react-practice-project-for-beginner-to-advance-18da
     content: (
-      <p>Many developers or beginners just learn all the fundamentals concepts 
-        but they don't implement those concepts. 
+      <p>Many developers or beginners just learn all the fundamentals concepts
+        but they don't implement those concepts.
         So Projects are one of the best ways to implement those concepts.</p>
     )
   },
@@ -47,14 +48,32 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <Header />
-      <Menu />
-      <Sidebar articles={articles} handleContent={handleContent} />
-      <Contents title={title} content={content} />
-      <Footer />
-    </div>
+    <>
+      <GlobalStyle />
+      <Container>
+        <Header />
+        <Menu />
+        <Sidebar articles={articles} handleContent={handleContent} />
+        <Contents title={title} content={content} />
+        <Footer />
+      </Container>
+    </>
   );
 }
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+`
+
+const Container = styled.div`
+  margin: 10vh 10vw;
+  height: 80vh;
+`;
 
 export default App;
