@@ -4,7 +4,7 @@ Repository to store my challenges made in the [B.Academy](https://b-academy.brai
 
 - [x] [Challenge One](https://github.com/rayanaprata/b-academy-bootcamp-React/tree/main/challengeOne/my-app)
 - [x] [Challenge Two](https://github.com/rayanaprata/b-academy-bootcamp-React/tree/main/challengeTwo/my-app)
-- [ ] [Challenge Three](https://github.com/rayanaprata/b-academy-bootcamp-React/tree/main/challengeThree/car-app)
+- [x] [Challenge Three](https://github.com/rayanaprata/b-academy-bootcamp-React/tree/main/challengeThree/car-app)
 - [ ] [Challenge Four](https://github.com/rayanaprata/b-academy-bootcamp-React/tree/main/challengeFour)
 
 To access official React documentation [click here](https://reactjs.org/). 💻
