@@ -22,16 +22,20 @@ const articles = [
     id: 2,
     title: 'React Practice Project for Beginner to Advance', // https://dev.to/undefinedhere/react-practice-project-for-beginner-to-advance-18da
     content: (
-      <p>Many developers or beginners just learn all the fundamentals concepts
+      <p>
+        Many developers or beginners just learn all the fundamentals concepts
         but they don't implement those concepts.
-        So Projects are one of the best ways to implement those concepts.</p>
+        So Projects are one of the best ways to implement those concepts.
+      </p>
     )
   },
   {
     id: 3,
     title: 'How I structure my React projects', // https://dev.to/larswaechter/how-i-structure-my-react-projects-jii
     content: (
-      <p>Architecture of React: What should the folder structure look like?</p>
+      <p>
+        Architecture of React: What should the folder structure look like?
+      </p>
     )
   },
 ];
