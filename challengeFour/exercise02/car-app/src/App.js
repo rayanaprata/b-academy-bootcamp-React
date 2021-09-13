@@ -1,8 +1,9 @@
+import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import {useState, useEffect} from "react";
 import {Form} from "./components/form/index";
 import {Table} from "./components/table/index";
 import {get, post, del} from "./http";
-import "./style.css";
 
 const url = "http://localhost:3333/cars";
 
@@ -57,11 +58,28 @@ function App() {
   }
 
   return (
-    <div className="cars">
-      <Form handleSubmit={handleSubmit} />
-      <Table cars={cars} handleDelete={handleDelete} />
-    </div>
+    <>
+      <GlobalStyle />
+      <Cars>
+        <Form handleSubmit={handleSubmit} />
+        <Table cars={cars} handleDelete={handleDelete} />
+      </Cars>
+    </>
   );
 }
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    box-sizing: border-box;
+    background-color: rgb(219, 219, 219);
+    font-family: "Helvetica Neue", Helvetica;
+  }
+`
+
+const Cars = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
 
 export default App;

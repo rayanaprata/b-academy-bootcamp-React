@@ -1,16 +1,17 @@
+import styled from 'styled-components';
 import {CarItem} from "../car-item/index";
 
 export function Table({cars, handleDelete}) {
   return (
-    <table>
+    <TableSt>
       <thead>
         <tr>
-          <th>Image</th>
-          <th>Brand/Model</th>
-          <th>Year</th>
-          <th>Plate</th>
-          <th>Color</th>
-          <th></th>
+          <Th>Image</Th>
+          <Th>Brand/Model</Th>
+          <Th>Year</Th>
+          <Th>Plate</Th>
+          <Th>Color</Th>
+          <Th></Th>
         </tr>
       </thead>
       <tbody>
@@ -20,10 +21,24 @@ export function Table({cars, handleDelete}) {
           ))
         ) : (
           <tr>
-            <td colSpan="6">Nenhum carro cadastrado.</td>
+            <Td colSpan="6">Nenhum carro cadastrado.</Td>
           </tr>
         )}
       </tbody>
-    </table>
+    </TableSt>
   );
 }
+
+const Th = styled.th`
+  border: 1px solid rgb(51, 51, 51);
+`;
+
+const Td = styled.td`
+  border: 1px solid rgb(51, 51, 51);
+`;
+
+
+const TableSt = styled.table`
+  border-collapse: collapse;
+  text-align: center;
+`;

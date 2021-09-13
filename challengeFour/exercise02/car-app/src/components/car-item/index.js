@@ -1,16 +1,16 @@
-import "./index.css";
+import styled from 'styled-components';
 
 export function CarItem({car, handleDelete}) {
   return (
     <tr>
       <td>
-        <img src={car.image} alt={car.brandModel} />
+        <Img src={car.image} alt={car.brandModel} />
       </td>
       <td>{car.plate}</td>
       <td>{car.brandModel}</td>
       <td>{car.year}</td>
       <td>
-        <div style={{backgroundColor: car.color}}></div>
+        <Color style={{backgroundColor: car.color}}></Color>
       </td>
       <td>
         <button onClick={() => handleDelete(car.plate)}>Excluir</button>
@@ -18,3 +18,13 @@ export function CarItem({car, handleDelete}) {
     </tr>
   );
 }
+
+const Img = styled.img`
+  max-width: 120px;
+  max-height: 120px;
+`;
+
+const Color = styled.div`
+  width: 3rem;
+  height: 3rem;
+`;
